@@ -4,7 +4,8 @@ import {
 } from '@angular/core/testing';
 import { Component } from '@angular/core';
 
-import { Todo, TodolistComponent, TodolistModule } from './index';
+import { Todo, TodolistComponent } from './index';
+import TodolistModule from './todolist.module';
 
 @Component({
     selector: 'as-test',

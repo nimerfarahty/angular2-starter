@@ -1,11 +1,14 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeRoutes } from './home/index';
-import { TodolistRoutes } from './todolist/index';
 
 const appRoutes: Routes = [
     ...HomeRoutes,
-    ...TodolistRoutes
+    // ...TodolistRoutes,
+    {
+        path: 'todolist',
+        loadChildren: 'app/todolist/todolist.module'
+    }
 ];
 
 export const appRoutingProviders: any[] = [
