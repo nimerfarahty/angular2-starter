@@ -17,6 +17,7 @@
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'app': {
+            // format: 'register',
             defaultExtension: 'js'
         },
         'test': {
@@ -67,7 +68,7 @@
         var main = global.ENV === 'testing' ? 'index.js' :
             'bundles/' + pkgName + '.umd.js';
 
-        packages['@angular/'+pkgName] = { main: main, defaultExtension: 'js' };
+        packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
     });
 
     var config = {

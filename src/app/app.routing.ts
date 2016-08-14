@@ -7,7 +7,7 @@ const appRoutes: Routes = [
     // ...TodolistRoutes,
     {
         path: 'todolist',
-        loadChildren: 'app/todolist/todolist.module'
+        loadChildren: 'app/+todolist/todolist.module'
     }
 ];
 

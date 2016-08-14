@@ -27,20 +27,33 @@
 
     <!-- Load libraries -->
     <script src="../node_modules/zone.js/dist/zone.js"></script>
+    <script src="../node_modules/systemjs/dist/system.js"></script>
 
     <!-- endbuild -->
 
+
     <!-- build:js assets/app.js -->
-    <script src="tmp/app/bundle.js"></script>
+    <!--<script src="systemjs.conf.js"></script>-->
     <!-- endbuild -->
 
     <!-- build:remove -->
-    <script src="../node_modules/systemjs/dist/system.js"></script>
-    <script src="systemjs.conf.js"></script>
+
+    <!-- endbuild -->
+
     <script>
+      System.config({
+        map: {
+          app: 'src/tmp/app'
+        },
+        packages: {
+          app: {
+            defaultExtension: 'js'
+          }
+        }
+      });
       System.import('app/main.js')
         .catch(function(err) { console.error(err); });
     </script>
-    <!-- endbuild -->
+
   </body>
 </html>
