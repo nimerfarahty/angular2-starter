@@ -27,7 +27,7 @@
             <div class="form-group">
                 <form (submit)="addTodo()" #todoForm="ngForm">
                     <label for="todo">To Do</label>
-                    <span [hidden]="todo.name.valid" class="badge badge-warning">Required</span>
+                    <span [hidden]="todo.name" class="badge badge-warning">Required</span>
                     <div class="form-inline">
                         <input required [(ngModel)]="todo.name" id="todo" name="todoName" type="text" class="form-control" size="50">
                         <button type="submit" class="btn btn-primary">Add</button>

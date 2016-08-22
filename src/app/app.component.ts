@@ -4,7 +4,7 @@ import { CONSTANTS } from './shared';
 
 @Component({
     selector: 'as-main-app',
-    templateUrl: 'app/app.html'
+    templateUrl: 'app.html'
 })
 export class AppComponent {
     public appBrand: string;

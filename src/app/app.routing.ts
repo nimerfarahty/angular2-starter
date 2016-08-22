@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeRoutes } from './home/index';
 import { TodolistRoutes } from './todolist/index';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
     ...HomeRoutes,
     ...TodolistRoutes
 ];

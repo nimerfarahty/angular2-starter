@@ -69,16 +69,18 @@ function compileTs(files, watchMode) {
     var inline = !argv.excludeSource;
     watchMode = watchMode || false;
 
-    var tsProject = ts.createProject('tsconfig.json');
+    var tsProject = ts.createProject('tsconfig.json', {
+        typescript: require('typescript')
+    });
     var allFiles = [].concat(files, typingFiles);
     var res = gulp.src(allFiles, {
             base: config.src,
             outDir: config.tmp
         })
-        .pipe(tslint({
-            formatter: 'verbose'
-        }))
-        .pipe(tslint.report())
+        // .pipe(tslint({
+        //     formatter: 'verbose'
+        // }))
+        // .pipe(tslint.report())
         .pipe(sourcemaps.init())
         .pipe(ts(tsProject))
         .on('error', function () {

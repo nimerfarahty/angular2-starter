@@ -3,7 +3,15 @@ var config = require('../config')();
 var del = require('del');
 
 /* Run all clean tasks */
-gulp.task('clean', ['clean-build', 'clean-report', 'clean-ts', 'clean-sass']);
+gulp.task('clean', ['clean-build', 'clean-report', 'clean-ts', 'clean-sass', 'clean-ngc']);
+
+gulp.task('clean-ngc', function() {
+    return del([
+        config.app + '**/*.ngfactory.*',
+        config.app + '**/*.js*',
+        config.app + '**/*.css.shim.ts'
+    ]);
+});
 
 /* Clean build folder */
 gulp.task('clean-build', function () {

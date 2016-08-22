@@ -50,8 +50,8 @@ module.exports = function () {
     var systemJs = {
         builder: {
             normalize: true,
-            minify: true,
-            mangle: true,
+            minify: false,
+            mangle: false,
             runtime: false,
             globalDefs: {
                 DEBUG: false,

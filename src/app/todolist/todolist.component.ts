@@ -4,12 +4,12 @@ import { Todo } from './todo.model';
 
 @Component({
     selector: 'as-todolist',
-    templateUrl: 'app/todolist/todolist.html'
+    templateUrl: 'todolist.html'
 })
 export class TodolistComponent {
     public todo: Todo;
-    private list: Todo[];
-    private showCompleted: Boolean;
+    public showCompleted: Boolean;
+    public list: Todo[];
 
     constructor() {
         this.showCompleted = true;

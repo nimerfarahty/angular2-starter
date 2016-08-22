@@ -10,11 +10,19 @@ var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var gulpTemplate = require('gulp-template');
 var envVars = require('../utils/env-vars');
+var run = require('gulp-run');
 
 require('@ngstarter/systemjs-extension')(config);
 
 gulp.task('build', function (done) {
-    runSequence('test', 'build-systemjs', 'build-assets', done);
+    runSequence('ngc', 'build-systemjs', 'build-assets', done);
+});
+
+gulp.task('ngc', function() {
+    return run('ngc -p .').exec()
+    .on('finish', function() {
+        console.log('Compiled');
+    });
 });
 
 /* Concat and minify/uglify all css, js, and copy fonts */
