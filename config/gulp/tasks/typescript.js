@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var util = require('gulp-util');
 var config = require('../config')();
 var ts = require('gulp-typescript');
-var tslint = require('gulp-tslint');
+// var tslint = require('gulp-tslint');
 var sourcemaps = require('gulp-sourcemaps');
 var argv = require('yargs').argv;
 

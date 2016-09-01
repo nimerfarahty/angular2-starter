@@ -12,10 +12,10 @@ var gulpTemplate = require('gulp-template');
 var envVars = require('../utils/env-vars');
 var run = require('gulp-run');
 
-require('@ngstarter/systemjs-extension')(config);
+require('@ngstarter/webpack-extension')(config);
 
 gulp.task('build', function (done) {
-    runSequence('ngc', 'build-systemjs', 'build-assets', done);
+    runSequence('ngc', 'build-webpack', 'build-assets', done);
 });
 
 gulp.task('ngc', function() {
