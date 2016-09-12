@@ -1,5 +1,5 @@
-declare module jasmine {
-    interface Matchers {
-        toContainText(text: string): boolean;
-    }
-}
+// declare module jasmine {
+//     interface Matchers {
+//         toContainText(text: string): boolean;
+//     }
+// }

@@ -28,16 +28,16 @@ gulp.task('ngc', function() {
 /* Concat and minify/uglify all css, js, and copy fonts */
 gulp.task('build-assets', function (done) {
     runSequence('clean-build', ['sass', 'fonts'], function () {
-        gulp.src(config.app + '**/*.html', {
-            base: config.app
-        })
-        .pipe(gulp.dest(config.build.app));
+        // gulp.src(config.app + '**/*.html', {
+        //     base: config.app
+        // })
+        // .pipe(gulp.dest(config.build.app));
 
-        gulp.src(config.app + '**/*.css', {
-            base: config.app
-        })
-        .pipe(cssnano())
-        .pipe(gulp.dest(config.build.app));
+        // gulp.src(config.app + '**/*.css', {
+        //     base: config.app
+        // })
+        // .pipe(cssnano())
+        // .pipe(gulp.dest(config.build.app));
 
         gulp.src(config.src + 'favicon.ico')
         .pipe(gulp.dest(config.build.path));

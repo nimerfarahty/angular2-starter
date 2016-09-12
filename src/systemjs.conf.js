@@ -10,7 +10,7 @@
 
     // map tells the System loader where to look for things
     var map = {
-        'app': 'src/app',
+        'app': 'src/tmp/app',
         'test': 'src/tmp/test'
     };
 
