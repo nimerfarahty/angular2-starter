@@ -17,8 +17,9 @@
     "debug": true
   },
   "exclude": [
-    "**/*.ts",
     "node_modules",
+    "src/**/*.spec.ts",
+    "src/test",
     "typings/index.d.ts",
     "typings/modules",
     "config",
