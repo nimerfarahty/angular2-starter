@@ -53,7 +53,7 @@
     "@angular/platform-server": "2.0.0-rc.6",
     "@angular/router": "3.0.0-rc.2",
     "@ngstarter/systemjs-extension": "1.0.0-rc.4",
-    "@ngstarter/webpack-extension": "^1.0.0-rc.3",
+    "@ngstarter/webpack-extension": "git@github.com:ngstarter/webpack-extension.git#test-ngc",
     "@types/lodash": "^4.14.34",
     "bootstrap-sass": "^3.3.7",
     "codelyzer": "0.0.28",
