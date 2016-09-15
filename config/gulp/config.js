@@ -29,10 +29,10 @@ module.exports = function () {
             helper: [testHelper + '**/*.ts']
         },
         build = {
-            path: 'build/',
-            app: 'build/app/',
-            fonts: 'build/fonts',
-            assetPath: 'build/assets/',
+            path: 'dist/',
+            app: 'dist/app/',
+            fonts: 'dist/fonts',
+            assetPath: 'dist/assets/',
             assets: {
                 lib: {
                     js: 'lib.js',

@@ -3,9 +3,9 @@ import { platformBrowser } from '@angular/platform-browser';
 
 import { AppModuleNgFactory } from '../../aot/src/app/app.module.ngfactory';
 
-declare var ENV: string;
+declare var process: any;
 
-if (ENV === 'production') {
+if (process.env.ENV === 'production') {
     enableProdMode();
 }
 
