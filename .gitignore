@@ -3,7 +3,7 @@ env.json
 /aot
 /node_modules
 /bower_components
-/build
+/dist
 /report
 /typings
 /src/tmp
