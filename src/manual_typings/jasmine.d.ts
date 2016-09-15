@@ -3,3 +3,5 @@
 //         toContainText(text: string): boolean;
 //     }
 // }
+
+declare var module;
