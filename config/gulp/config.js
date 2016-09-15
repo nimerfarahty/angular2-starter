@@ -2,6 +2,7 @@ var envConfig = require('./utils/env');
 
 module.exports = function () {
     var root = '',
+        aot = root + 'aot/',
         src = root + 'src/',
         config = root + 'config/',
         app = src + 'app/',
@@ -62,6 +63,7 @@ module.exports = function () {
 
     var gulpConfig = {
         root: root,
+        aot: aot,
         config: config,
         src: src,
         app: app,

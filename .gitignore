@@ -1,5 +1,6 @@
 env.json
 .idea/
+/aot
 /node_modules
 /bower_components
 /build

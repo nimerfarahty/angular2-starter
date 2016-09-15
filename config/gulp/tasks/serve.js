@@ -1,4 +1,7 @@
 var envConfig = require('../utils/env');
+// Load gulp config
+var config = require('../config')();
+require('@ngstarter/gzip-extension')(config);
 
 if (envConfig.ENV === envConfig.ENVS.DEV)
 {

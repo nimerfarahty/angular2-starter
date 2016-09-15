@@ -8,7 +8,7 @@ import { Todo } from './todo.model';
 })
 export class TodolistComponent {
     public todo: Todo;
-    public showCompleted: Boolean;
+    public showCompleted: boolean;
     public list: Todo[];
 
     constructor() {

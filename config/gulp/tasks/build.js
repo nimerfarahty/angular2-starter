@@ -12,16 +12,23 @@ var gulpTemplate = require('gulp-template');
 var envVars = require('../utils/env-vars');
 var run = require('gulp-run');
 
-require('@ngstarter/webpack-extension')(config);
+// require('@ngstarter/webpack-extension')(config);
 
 gulp.task('build', function (done) {
-    runSequence('ngc', 'build-webpack', 'build-assets', done);
+    runSequence('clean', 'ngc', 'rollup', 'build-assets', done);
 });
 
 gulp.task('ngc', function() {
-    return run('ngc -p .').exec()
+    return run('ngc -p tsconfig-aot.json').exec()
     .on('finish', function() {
-        console.log('Compiled');
+        console.log('NGC done.');
+    });
+});
+
+gulp.task('rollup', function() {
+    return run('rollup -c config/gulp/utils/rollup.js').exec()
+    .on('finish', function() {
+        console.log('Rollup done.');
     });
 });
 
