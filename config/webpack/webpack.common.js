@@ -1,8 +1,10 @@
 var webpack = require('webpack');
+var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var helpers = require('./helpers');
-console.log(helpers.root('src', 'app'));
+
 module.exports = {
   entry: {
     'polyfills': './src/app/polyfills.ts',
@@ -13,7 +15,6 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.ts']
   },
-
 
   module: {
     loaders: [
@@ -43,6 +44,11 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.ContextReplacementPlugin(
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      root('./src') // location of your src
+    ),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
@@ -52,3 +58,7 @@ module.exports = {
     })
   ]
 };
+
+function root(__path) {
+  return path.join(__dirname, __path);
+}
