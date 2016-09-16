@@ -7,6 +7,7 @@ gulp.task('clean', ['clean-build', 'clean-report', 'clean-ngc']);
 
 gulp.task('clean-ngc', function() {
     return del([
+        'compiled',
         config.aot,
         config.app + '**/*.ngfactory.*',
         config.app + '**/*.js*',

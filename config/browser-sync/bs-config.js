@@ -1,6 +1,9 @@
-    module.exports = {
-        "port": 8000,
-        "server": {
-            "baseDir": "./dist"
-        }
-    };
+module.exports = {
+    port: 8000,
+    server: {
+        middleware: {
+            2: require('compression')()
+        },
+        baseDir: "./dist"
+    }
+};

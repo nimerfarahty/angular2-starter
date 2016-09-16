@@ -10,7 +10,7 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
 
   entry: {
-    'app': './src/app/main-ngc.ts'
+    'app': './src/app/main-ngc.js'
   },
 
   output: {

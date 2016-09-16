@@ -18,8 +18,10 @@
     "test": "karma start",
     "e2e": "gulp e2e",
     "env": "gulp env",
-    "serve-build": "lite-server -c config/browser-sync/bs-config.js",
-    "build": "ngc -p tsconfig-aot.json && webpack --config config/webpack/webpack.prod.js --progress --profile --bail",
+    "ngc": "ngc -p tsconfig-aot.json",
+    "serve": "lite-server -c config/browser-sync/bs-config.js",
+    "build": "npm run ngc && webpack --config config/webpack/webpack.prod.js --progress --profile --bail",
+    "serve-build": "npm run build && npm run serve",
     "clean": "gulp clean",
     "coverage": "coveralls < ./report/remap/lcov.info"
   },
@@ -88,6 +90,7 @@
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^2.2.4",
+    "compression": "^1.6.2",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
