@@ -22,5 +22,8 @@ gulp.task('clean-build', function () {
 
 /* Clean report folder */
 gulp.task('clean-report', function () {
-    return del([config.report.path]);
+    return del([
+        'coverage',
+        config.report.path
+    ]);
 });
